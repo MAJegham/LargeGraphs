@@ -1,0 +1,18 @@
+cmake_minimum_required(VERSION 3.8)
+
+set(This UnitTestExample)
+
+set(Sources 
+	GraphTest.cpp
+)
+
+add_executable(${This} ${Sources} )
+target_link_libraries(${This} PUBLIC 
+	gtest_main
+	LargeGraphs
+	)
+
+add_test(
+	NAME ${This}
+	COMMAND ${This}
+)
