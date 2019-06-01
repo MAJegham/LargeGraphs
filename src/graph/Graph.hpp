@@ -9,8 +9,8 @@ class Graph
 protected:
     //number of edges in the graph
     unsigned long _nbEdges;
-    //number of vertives in the graph 
-    //FIXME for now it's over-estimated 
+    //number of vertives in the graph
+    //FIXME for now it's over-estimated
     unsigned long _nbVertices;
     //highest index used for vertices
     unsigned long _maxVertexIndex;
@@ -39,13 +39,13 @@ public:
 
     //Getter for attribute _nbVertices
     unsigned long get_nbVertices() const;
-    
+
     //Getter for attribute _nbEdges
     unsigned long get_nbEdges() const;
-    
+
     //Getter for attribute _maxVertexIndex
     unsigned long get_maxVertexIndex() const;
-    
+
     //Getter for attribute _minVertexIndex
     unsigned long get_minVertexIndex() const;
 

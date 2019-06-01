@@ -12,17 +12,22 @@ enable_testing()
 
 add_subdirectory(lib/googletest)
 
-set(Headers 
-	src/Edge.hpp
-	src/Graph.hpp
-	src/Utils.hpp
+set(Headers
+	${PROJECT_SOURCE_DIR}/src/graph/elements/Edge.hpp
+	${PROJECT_SOURCE_DIR}/src/graph/Graph.hpp
+	${PROJECT_SOURCE_DIR}/src/graph/EdgeListGraph.hpp
+	${PROJECT_SOURCE_DIR}/src/utils/MathUtils.hpp
+	${PROJECT_SOURCE_DIR}/src/utils/FileUtils.hpp
 )
 
-set(Sources 
-	src/Graph.cpp
-	src/main.cpp
+set(Sources
+	${PROJECT_SOURCE_DIR}/src/graph/Graph.cpp
+	${PROJECT_SOURCE_DIR}/src/graph/EdgeListGraph.cpp
+	${PROJECT_SOURCE_DIR}/src/utils/FileUtils.cpp
 )
 
 add_library(${This} STATIC ${Sources} ${Headers})
+
+include_directories(${This} PRIVATE ${PROJECT_SOURCE_DIR}/src)
 
 add_subdirectory(test)
